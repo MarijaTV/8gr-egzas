@@ -7,7 +7,7 @@ Taip pat parašykite funkciją kuri: isikviesdama save pačią atspausdina skai�
 
 */
 firstCountItems (data.length);
-secondCountKaunasItems ();
+secondCountKaunasItems (); //nesuprantu, kodėl neveikia
 
 function firstCountItems(data) {
     console.log(data); //duomenų atvaizdavimas
@@ -16,15 +16,23 @@ function firstCountItems(data) {
     for (let i = 0; i < data.length; i++) {
         const element = data[i];
         console.log(data.length);
+        
     }
 }
-
-function secondCountKaunasItems(adresas) {
-    
-    console.log(data);
-    const countKaunas = data.filter(adresas => 'Kaunas');
-
-    console.log(countKaunas);
+// Filtruojame duomenis
+function secondFilterKaunasItems(data) {
+    let countKaunas = arrayOfObject.filter(function(obj){
+        //loop through each object
+        for(key in obj){
+          //check if object value contains value you are looking for
+          if(obj[key].includes('Kaunas')){
+            //add this object to the filtered array
+            return obj;
+            }
+           }
+          });
+            
+      console.log(countKaunas);
 }
     
 
